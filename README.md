@@ -5,4 +5,4 @@ This is a simple boilerplate for threejs projects. This code uses webpack to bun
 
 ### How to run
 1. run `npm install`
-2. run `npm run start` will open a new chrome tab which shows you a ball and a rectangular plane
+2. run `npm run start` will open a new chrome tab which shows you a colorful square room

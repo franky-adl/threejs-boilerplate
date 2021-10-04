@@ -1,7 +1,7 @@
 import {PointLight, PlaneGeometry, MeshPhongMaterial, Mesh} from 'three';
 
 export function addWallLighting(scene) {
-    const mainLight = new PointLight( 0xcccccc, 0.5, 250 )
+    const mainLight = new PointLight( 0xffffff, 1, 250 )
     mainLight.position.y = 60
     scene.add( mainLight )
 }
