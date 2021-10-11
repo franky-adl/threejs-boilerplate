@@ -1,15 +1,15 @@
-import {PointLight, PlaneGeometry, MeshPhongMaterial, Mesh} from 'three';
+import * as THREE from 'three';
 
 export function addWallLighting(scene) {
-    const mainLight = new PointLight( 0xffffff, 1, 250 )
+    const mainLight = new THREE.PointLight( 0xffffff, 1, 250 )
     mainLight.position.y = 60
     scene.add( mainLight )
 }
 
 function addWall(width, height, color, pos = {x: 0, y: 0, z: 0}, rot = {x: 0, y: 0, z: 0}) {
-    const geometry = new PlaneGeometry( width, height )
-    const material = new MeshPhongMaterial( {color: color} )
-    const plane = new Mesh( geometry, material )
+    const geometry = new THREE.PlaneGeometry( width, height )
+    const material = new THREE.MeshPhongMaterial( {color: color} )
+    const plane = new THREE.Mesh( geometry, material )
     plane.position.set(pos.x, pos.y, pos.z)
     plane.rotation.set(rot.x, rot.y, rot.z)
     return plane
